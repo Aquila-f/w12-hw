@@ -84,7 +84,10 @@
       "outputs": ["coverage/apps/katapotter"],
       "options": {
         "jestConfig": "apps/katapotter/jest.config.ts",
-        "passWithNoTests": true
+        "passWithNoTests": true,
+        "coverage": true,
+        "outputFile": "result.json",
+        "json": true
       }
     }
   },
