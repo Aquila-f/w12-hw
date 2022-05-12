@@ -20,4 +20,10 @@ describe('Game', () => {
     game.buy("p2", 1);
     expect(game.price).toBe(190);
   });
+
+  test('buy three', () => {
+    game.buy("p1", 1);
+    game.buy("p2", 2);
+    expect(game.price).toBe(290);
+  });
 });

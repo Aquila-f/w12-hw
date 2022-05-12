@@ -8,20 +8,22 @@ export class Game {
         for( let i=0;i<this.booksvector.length;i++ ){
             if(this.booksvector[i].name == bookname){
                 flag = true;
+                this.booksvector[i].len += 1;
             }
         }
         if(flag == false){
             // let book = foo(bookname, num);
+            console.log("---------")
             this.booksvector.push(foo(bookname, num))
         }
     }
     get price(){
         let final_price = 0;
-        // console.log(this.booksvector.length)
+        console.log(this.booksvector.length)
         for( let i=0;i<this.booksvector.length;i++ ){
             final_price += this.booksvector[i].len * 100;
-            // console.log(this.booksvector[i].len)
-            // console.log(this.booksvector[i].name)
+            console.log(this.booksvector[i].len)
+            console.log(this.booksvector[i].name)
         }
 
         final_price = final_price * this.discount[this.booksvector.length-1];
